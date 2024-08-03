@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('https://www.transparenttextures.com/patterns/asfalt-light.png'), linear-gradient(135deg, #1b2735 0%, #090a0f 100%);
+    animation: galaxy 20s linear infinite;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ff4081;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    flex: 1;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 3px solid #ff4081;
+    animation: fadeInLeft 2s ease-in-out;
+}
+
+.about-text {
+    max-width: 600px;
+    margin: 20px;
+    text-align: left;
+    animation: fadeInRight 2s ease-in-out;
+}
+
+.about-text h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes galaxy {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+}
+
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

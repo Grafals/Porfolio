@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    background: url('https://www.transparenttextures.com/patterns/asfalt-light.png'), linear-gradient(135deg, #1b2735 0%, #090a0f 100%);
+    animation: galaxy 20s linear infinite;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+header nav a:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.intro img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 3px solid #ff4081;
+}
+
+.intro-text {
+    max-width: 500px;
+    margin: 20px;
+}
+
+.intro-text h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.typing {
+    font-size: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+nav a {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff4081;
+    color: #000000;
+}
+
+/* Project Section */
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+/* Contact Section */
+#contact a {
+    color: #ff4081;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Animations */
+@keyframes galaxy {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.typing::after {
+    content: '';
+    border-right: 4px solid #ff4081;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+header {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.project, #contact p {
+    animation: slideIn 1s ease-in-out;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/asfalt-light.png'), linear-gradient(135deg, #1b2735 0%, #090a0f 100%);
+    z-index: -1;
+    opacity: 0.3;
+    animation: galaxy 20s linear infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 80%;
+    }
+}
