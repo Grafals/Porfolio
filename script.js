@@ -1,5 +1,5 @@
 const typingElement = document.querySelector('.typing');
-const skills = ['HTML5', 'CSS6', 'JavaScript'];
+const skills = ['HTML5', 'CSS6', 'Tailwind CSS', 'JavaScript'];
 let skillIndex = 0;
 let charIndex = 0;
 
